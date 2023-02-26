@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//Definición de prototipos
+
 void alumnos();
 
 
@@ -32,7 +32,7 @@ int main() {
     } while (repetir);
     return 0;
 }
-//Implementación de funciones
+
 void alumnos()
 {
 
@@ -68,11 +68,11 @@ void alumnos()
     tn4 = nca1 + nca2 + nca3 + nca4 + nta5;
     tn5 = nqa1 + nqa2 + nqa3 + nqa4 + nqa5;
 
-    cout << "\n\tTotal de las 5 notas de "<<alum1<<" es de: "<< tn1 <<endl;
-    cout << "\n\tTotal de las 5 notas de "<<alum2<<" es de: "<< tn2 <<endl;
-    cout << "\n\tTotal de las 5 notas de "<<alum3<<" es de: "<< tn3 <<endl;
-    cout << "\n\tTotal de las 5 notas de "<<alum4<<" es de: "<< tn4 <<endl;
-    cout << "\n\tTotal de las 5 notas de "<<alum5<<" es de: "<< tn5 <<endl;
+    cout << "\n\tTotal de las 5 notas de " <<alum1<< " es de: " << tn1 <<endl;
+    cout << "\n\tTotal de las 5 notas de " <<alum2<< " es de: " << tn2 <<endl;
+    cout << "\n\tTotal de las 5 notas de " <<alum3<< " es de: " << tn3 <<endl;
+    cout << "\n\tTotal de las 5 notas de " <<alum4<< " es de: " << tn4 <<endl;
+    cout << "\n\tTotal de las 5 notas de " <<alum5<< " es de: " << tn5 <<endl;
 
     cout << "\n\t----------------------" << endl;
 
