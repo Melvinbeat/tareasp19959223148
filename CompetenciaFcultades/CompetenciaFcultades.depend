@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1677389937 source:d:\universidad\3ersemestre\programacion\programasgb\competenciafcultades\main.cpp
+	<iostream>
+	<stdlib.h>
+	<ctime>
+	<iomanip>
+	<string.h>
+
