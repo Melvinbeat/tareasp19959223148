@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1681294292 source:d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+
+1681275713 d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\include\usuarios.h
+
+1681294426 source:d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\src\usuarios.cpp
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"usuarios.h"
+
+1681275791 source:d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\src\conexion.cpp
+
+1681291231 source:d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681291175 d:\universidad\3ersemestre\programacion\programasgb\benchmarkinnomina\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
