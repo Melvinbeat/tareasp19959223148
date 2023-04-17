@@ -9,6 +9,7 @@ void procesoSTAFF();
 void procesoempleados();
 void informesSTAFF();
 void informesempleados();
+void ayudaSTAFF();
 void menuGeneralSTAFF();
 void menuGeneralEmpleados();
 int main()
@@ -18,7 +19,7 @@ int main()
     {
 
     cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL  |"<<endl;
+	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL   |"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
     cout<< " ";
     cout<<"\t\t\t Seleccionar usuario "<<endl;
@@ -83,11 +84,9 @@ void menuGeneralSTAFF(){
 	    procesoSTAFF();
 		break;
 	case 3:
-	    infopersonalSTAFF();
-
+	    informesSTAFF();
 		break;
 	case 4:
-	    informesSTAFF();
 
 		break;
 	case 5:
@@ -108,7 +107,7 @@ void menuGeneralEmpleados(){
     {
 	system("cls");
 	cout<<"\t\t\t-------------------------------------"<<endl;
-	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL Empleados |"<<endl;
+	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL Empleados  |"<<endl;
 	cout<<"\t\t\t-------------------------------------"<<endl;
 	cout<<"\t\t\t 1). Informacion personal laboral "<<endl;
 	cout<<"\t\t\t 2). Procesos"<<endl;
