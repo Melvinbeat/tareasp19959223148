@@ -8,13 +8,13 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
-const int FILASTABLERO = 5;
+const int FILASTABLERO = 5;//establecemos parametros de inicio para el programa
 const int COLUMNASTABLERO = 5;
 const int MINASENTABLERO = 3;
-const bool MODODESARROLLADOR = true;
+const bool MODODESARROLLADOR = true;//modo jugador desactivado al ser verdadero
 Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR);
 string nameUsuario, codigo;
-void Usuario::insertar()
+void Usuario::insertar()//creamos la funcion que permite crear usuarios
 {
 	system("cls");
 	fstream file;
@@ -24,7 +24,7 @@ void Usuario::insertar()
 	cin>>nombre;
 	cout<<"\t\t\tIngresa la contraseña: ";
 	cin>>contrasena;
-	score = 0;
+	score = 0;//es igualado a cero para que no agrege valore erroneos
 	file.open("nombresUsuarios.txt", ios::app | ios::out);
 	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
 	file.close();
@@ -170,6 +170,7 @@ void Usuario::modificar()
                 if (opcion == 2){
                     cout<<" Ingrese la contraseña: ";
                     cin>>contrasena;
+                    codigo = contrasena;
                 }
             file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
             found++;
@@ -186,7 +187,7 @@ void Usuario::modificar()
     remove("nombresUsuarios.txt");
     rename("Record.txt","nombresUsuarios.txt");
 }
-void Usuario::borrar()
+void Usuario::borrar()//creamos la funcion de borrar para luego se usada en otras funciones
 {
 	system("cls");
 	fstream file,file1;
@@ -205,14 +206,14 @@ void Usuario::borrar()
 		cin>>name;
 		cout<<" Ingrese la contraseña: ";
 		cin>>c2;
-		file1.open("Record.txt",ios::app | ios::out);
+		file1.open("Record.txt",ios::app | ios::out);//abrimos archivo a utilizar
 		file >> nombre >> contrasena >> score;
 		while(!file.eof())
 		{
 			if(name!= nombre && c2 != contrasena)
 			{
 				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
-			}
+			}//se imprimen los datos en el log del usuario
 			else
 			{
 				found++;
@@ -226,18 +227,18 @@ void Usuario::borrar()
 		}
 		file1.close();
 		file.close();
-		remove("nombresUsuarios.txt");
+		remove("nombresUsuarios.txt");//usamos el archivo de texto para eliminar los datos ingresados
 		rename("Record.txt","nombresUsuarios.txt");
 		exit(0);
 	}
 }
 void Usuario::cambioScore(int valScore)
 {
-	system("cls");
+	system("cls"); //limpiamos el menu
 	fstream file,file1;
 	string name;
-	file.open("nombresUsuarios.txt",ios::in);
-	if(!file)
+	file.open("nombresUsuarios.txt",ios::in); //abrmos el archivo a usar
+	if(!file) //creamos la condicion con respecto a los valores de la libreria
 	{
 		cout<<"\n\t\t\tNo hay informacion...";
 		file.close();
@@ -249,7 +250,7 @@ void Usuario::cambioScore(int valScore)
 		file >> nombre >> contrasena >> score;
 		while(!file.eof())
 		{
-			if(name!= nombre)
+			if(name!= nombre)//creamos la condicion de la variable a ser ejecutada
 			{
 				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
 			}
@@ -273,7 +274,9 @@ void Usuario::cambioScore(int valScore)
 		file1.close();
 		file.close();
 		remove("nombresUsuarios.txt");
-		rename("Record.txt","nombresUsuarios.txt");
+		rename("Record.txt","nombresUsuarios.txt"); //importamos el arte contenido en el documento de texto como la portada
 	}
 	cout << "\n\n\t\t\tFIN DEL JUEGO!!!\n\n\n";
 }
+
+
