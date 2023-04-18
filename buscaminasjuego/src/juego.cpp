@@ -1,6 +1,7 @@
 #include "Juego.h"
 #include <fstream>
 #include <unistd.h>
+#include "Usuario.h"
 
 int Juego::aleatorio_en_rango(int minimo, int maximo)
 	{
@@ -71,31 +72,53 @@ int Juego::aleatorio_en_rango(int minimo, int maximo)
 	void Juego::iniciar()
 	{
 		int fila, columna;
+		int puntos = 0;
+		Usuario agregarScore;
 		while (true)
 		{
+			system ("cls");
+			cout << "\n\tvidas: " << VIDASTABLERO << endl;
+			cout << "\tPuntos: " << puntos << endl << endl;
 			this->tablero.imprimir();
 			fila = this->solicitarFilaUsuario();
 			columna = this->solicitarColumnaUsuario();
 			bool respuestaAUsuario = this->tablero.descubrirMina(columna, fila);
+			this -> VIDASTABLERO = VIDASTABLERO;
 			if (!respuestaAUsuario)
 			{
-				cout << "Perdiste el Juego\n";
+				VIDASTABLERO--;
+				puntos = puntos - 5;
+			}
+			if (VIDASTABLERO == 0)
+            {
+				system("cls");
+				cout << "\n\tPerdiste el Juego\n";
+				puntos = puntos + 5;
+				cout<<"\tObtuviste: "<<puntos<<" puntos "<<endl;
 				this->tablero.setModoDesarrollador(true);
 				this->tablero.imprimir();
-
+				system("pause");
+				agregarScore.cambioScore(puntos);
 				break;
 			}
 
 			if (this->jugadorGana())
 			{
-				cout << "Ganaste el Juego\n";
+				system("cls");
+				puntos = puntos + 5;
+				cout << "\n\tGanaste el Juego\n";
+				cout<<"\tObtuviste: "<<puntos<<" puntos "<<endl;
 				this->tablero.setModoDesarrollador(true);
 				this->tablero.imprimir();
-
+				system("pause");
+				agregarScore.cambioScore(puntos);
 				break;
+
 			}
+			puntos+=5;
 		}
 	}
+
 	void Juego::dibujarPortada(string nombreArchivo)
 	{
         string line;

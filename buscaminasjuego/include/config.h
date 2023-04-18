@@ -5,7 +5,7 @@
 class Config
 {
     public:
-        Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero, int vidasTablero);
+        Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero);
         int getfilasTablero();
         int setfilasTablero(int filasTablero);
         int getcolumnasTablero();
@@ -14,8 +14,6 @@ class Config
         int setminasTablero(int minasTablero);
         bool getmodoDesarrolladorTablero();
         bool setmodoDesarrolladorTablero(bool modoDesarrolladorTablero);
-        int getvidasTablero();
-        int setvidasTablero(int vidasTablero);
         void menuConfiguracion();
     protected:
 
@@ -24,7 +22,6 @@ class Config
         int columnasTablero;
         int minasTablero;
         bool modoDesarrolladorTablero;
-        int vidasTablero;
 };
 
 #endif // CONFIG_H

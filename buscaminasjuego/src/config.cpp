@@ -3,13 +3,12 @@
 #include "Config.h"
 using namespace std;
 
-Config::Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero, int vidasTablero)
+Config::Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero)
 {
     this->filasTablero = filasTablero;
     this->columnasTablero = columnasTablero;
     this->minasTablero = minasTablero;
     this->modoDesarrolladorTablero = modoDesarrolladorTablero;
-    this->vidasTablero = vidasTablero;
 }
 void Config::menuConfiguracion()
 {
@@ -25,11 +24,10 @@ void Config::menuConfiguracion()
         cout << "\t\t2. Columnas del Tablero -> " << this->getcolumnasTablero() << endl;
         cout << "\t\t3. Minas del Tablero ----> " << this->getminasTablero()<< " (DIFICIL= 5+ / INTERMEDIO= 2-4 / FACIL= 1) "  << endl;
         cout << "\t\t4. Modo del Juego -------> " << this->getmodoDesarrolladorTablero()<<endl;
-        cout << "\t\t5. Vidas del Jugador ----> " << this->getvidasTablero() << endl;
-        cout << "\t\t6. Regresar al menu general" << endl;
+        cout << "\t\t5. Regresar al menu general" << endl;
         cout << "\n\t\tIngrese una opcion: ";
         cin >> opciones;
-        if (opciones!=6)
+        if (opciones!=5)
         {
             cout << "\n\tIngrese el valor que desea cambiar: ";
             cin >> valorIngresado;
@@ -60,13 +58,7 @@ void Config::menuConfiguracion()
                 cout << "Modo del Juego actualizado" << endl;
                 break;
             }
-        case 5:
-            {
-                this->setvidasTablero(valorIngresado);
-                cout << "Vidas del Juego actualizadas" << endl;
-                break;
-            }
-        case 6: repetir = false;
+        case 5: repetir = false;
                 break;
         }
         system("pause");
@@ -103,12 +95,4 @@ bool Config::getmodoDesarrolladorTablero()
 bool Config::setmodoDesarrolladorTablero(bool modoDesarrolladorTablero)
 {
     this->modoDesarrolladorTablero=modoDesarrolladorTablero;
-}
-int Config::getvidasTablero()
-{
-    return this->vidasTablero;
-}
-int Config::setvidasTablero(int vidasTablero)
-{
-    this->vidasTablero=vidasTablero;
 }

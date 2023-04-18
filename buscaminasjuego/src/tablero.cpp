@@ -205,7 +205,7 @@ void Tablero::imprimirSeparadorEncabezado()
 		Celda celda = this->contenidoTablero.at(y).at(x);
 		if (celda.getMina())
 		{
-			return false;
+            return false;
 		}
 		return true;
 	}
@@ -224,6 +224,4 @@ void Tablero::imprimirSeparadorEncabezado()
 			}
 		}
 		return contador;
-		cout << " esto es contador"<< contador<< endl;
-
 	}

@@ -59,3 +59,61 @@
 	<conio.h>
 	<iomanip>
 
+1681310525 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+	"tablero.h"
+	"Usuario.h"
+
+1680478844 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\juego.h
+	"Tablero.h"
+
+1680478701 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1680478822 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\celda.h
+
+1680478837 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\config.h
+
+1681288524 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1680478740 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1681258165 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1681261487 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\juego.cpp
+	"Juego.h"
+	<fstream>
+	<unistd.h>
+
+1681168343 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1681310354 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\usuario.cpp
+	"Usuario.h"
+	"Juego.h"
+	"Config.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+

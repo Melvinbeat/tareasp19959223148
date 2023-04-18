@@ -12,41 +12,8 @@ const int FILASTABLERO = 5;
 const int COLUMNASTABLERO = 5;
 const int MINASENTABLERO = 3;
 const bool MODODESARROLLADOR = true;
-const int VIDASTABLERO = 3;
-void Usuario::menuPrincipal()
-{
-    int opcion;
-	do
-    {
-	system("cls");
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |      INGRESO DE SESION     |"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t 1. Iniciar Sesion"<<endl;
-	cout<<"\t\t\t 2. Crear cuenta"<<endl;
-	cout<<"\t\t\t 3. Exit"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"Ingresa tu Opcion: ";
-    cin>>opcion;
-
-    switch(opcion)
-    {
-	case 1:
-		iniciarSesion();
-		break;
-	case 2:
-		insertar();
-		break;
-	case 3:
-		return;
-	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-	}
-	getch();
-    }while(opcion!=3);
-}
+Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR);
+string nameUsuario, codigo;
 void Usuario::insertar()
 {
 	system("cls");
@@ -57,8 +24,9 @@ void Usuario::insertar()
 	cin>>nombre;
 	cout<<"\t\t\tIngresa la contraseña: ";
 	cin>>contrasena;
+	score = 0;
 	file.open("nombresUsuarios.txt", ios::app | ios::out);
-	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena << "\n";
+	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
 	file.close();
 }
 void Usuario::iniciarSesion()
@@ -73,33 +41,36 @@ void Usuario::iniciarSesion()
 	}
 	else
 	{
-		string nameUsuario, codigo;
 		cout<<"\n----------------------------------------------------------------------------------------------------------------";
         cout<<"\n--------------------------------------------------- Iniciar Sesion ---------------------------------------------"<<endl;
 		cout<<"\n\t\tUsuario: ";
 		cin>>nameUsuario;
 		cout << "\t\tContraseña: ";
 		cin >> codigo;
-		file >> nombre >> contrasena;
+		file >> nombre >> contrasena >> score;
 		while(!file.eof())
 		{
 			if(nameUsuario==nombre && codigo == contrasena)
 			{
-                Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO);
+                Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR);
+                Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
                 do{
                 Juego juegoTemporal(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
                 system("cls");
                 cout<<"\n------------------------------------------------------------------------------------------------------------------------";
-                cout<<"\n---------------------------------------------- BIENVENIDO AL JUEGO BUSCAMINAS -------------------------------------------"<<endl;
-                cout << "\n\t\t1. Si" << endl;
+                cout<<"\n---------------------------------------------- BIENVENIDO AL JUEGO BUSCAMINAS ------------------------------------------"<<endl;
+                cout << "\n\n\t\tUsuario: " << nombre << endl << endl;
+                cout << "\n\t\t1. Iniciar juego" << endl;
                 cout << "\t\t2. Configuracion del juego" << endl;
                 cout << "\t\t3. Modificar usuario" << endl;
-                cout << "\t\t4. salir" << endl;
+                cout << "\t\t4. Regresar a menú principal" << endl;
+                cout << "\t\tIngrese una opción: ";
                 cin >> opcion;
                     switch(opcion)
                     {
                         case 1:
                             file.close();
+                            system("cls");
                             juegoTemporal.iniciar();
                             system("pause");
                             break;
@@ -121,11 +92,11 @@ void Usuario::iniciarSesion()
                 }while(opcion!=4);
 				found++;
 			}
-			file >> nombre >> contrasena;
+			file >> nombre >> contrasena >> score;
 		}
 		if(found==0)
 		{
-			cout<<"\n\t\t\t Persona no encontrada...";
+			cout<<"\n\t\t\t El usuario o contraseña sin incorrectos...";
 		}
 		file.close();
 	}
@@ -167,66 +138,59 @@ void Usuario::modificar()
 {
 	system("cls");
 	fstream file,file1;
-	string nameUsuario, codigo;
+	string name, c2;
 	int found=0, opcion;
 	cout<<"\n-------------------------Modificacion Detalles Usuario-------------------------"<<endl;
 	file.open("nombresUsuarios.txt",ios::in);
-	if(!file)
-	{
-		cout<<"\n\t\t\tNo hay informacion..,";
-		file.close();
-	}
-	else
-	{
-        cout<<"\n Ingrese su nombre de usuario: ";
-        cin>>nameUsuario;
-        cout<<" Ingrese la contraseña: ";
-        cin>>codigo;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> nombre >> contrasena;
-		while(!file.eof())
-		{
-			if(nameUsuario!=nombre && codigo!=contrasena){
-			 file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena << "\n";
-			}
-			else{
-                cout << "\n\tQue desea modificar?" << endl;
-                cout << "\t1. Usuario" << endl;
-                cout << "\t2. Contraseña" << endl;
-                cout << "\tIngrese una opcion" << endl;
-                cin >> opcion;
-                if (opcion == 1){
-                    cout<<"\n Ingrese su nombre de usuario: ";
-                    cin>>nombre;
-                    file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena << "\n";
-                    found++;
-                }
-                else{
-                    if (opcion == 2){
-                        cout<<" Ingrese la contraseña: ";
-                        cin>>contrasena;
-                    }
-                file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena << "\n";
+	cout<<"\n Ingrese su nombre de usuario: ";
+    cin>>name;
+    cout<<" Ingrese la contraseña: ";
+    cin>>c2;
+    file1.open("Record.txt",ios::app | ios::out);
+    file >> nombre >> contrasena >> score;
+    while(!file.eof())
+    {
+        if(name!=nombre && c2!=contrasena){
+         file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+        }
+        else{
+            cout << "\n\tQue desea modificar?" << endl;
+            cout << "\t1. Usuario" << endl;
+            cout << "\t2. Contraseña" << endl;
+            cout << "\tIngrese una opcion" << endl;
+            cin >> opcion;
+            if (opcion == 1){
+                cout<<"\n Ingrese su nombre de usuario: ";
+                cin>>nombre;
+                file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
+                nameUsuario = nombre;
                 found++;
+            }
+            else{
+                if (opcion == 2){
+                    cout<<" Ingrese la contraseña: ";
+                    cin>>contrasena;
                 }
-			}
-			file >> nombre >> contrasena;
-		}
-		if(found==0)
-		{
-			cout<<"\n\t\t\t Usuario no encontrado...";
-		}
-		file1.close();
-		file.close();
-		remove("nombresUsuarios.txt");
-		rename("Record.txt","nombresUsuarios.txt");
-	}
+            file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+            found++;
+            }
+        }
+        file >> nombre >> contrasena >> score;
+    }
+    if(found==0)
+    {
+        cout<<"\n\t\t\t Usuario no encontrado...";
+    }
+    file1.close();
+    file.close();
+    remove("nombresUsuarios.txt");
+    rename("Record.txt","nombresUsuarios.txt");
 }
 void Usuario::borrar()
 {
 	system("cls");
 	fstream file,file1;
-	string nombreUsuario, codigo;
+	string name, c2;
 	int found=0;
 	cout<<"\n------------------------- Borrar Cuenta -------------------------"<<endl;
 	file.open("nombresUsuarios.txt",ios::in);
@@ -238,23 +202,23 @@ void Usuario::borrar()
 	else
 	{
 		cout<<"\n Ingrese el usuario para borrar: ";
-		cin>>nombreUsuario;
+		cin>>name;
 		cout<<" Ingrese la contraseña: ";
-		cin>>codigo;
+		cin>>c2;
 		file1.open("Record.txt",ios::app | ios::out);
-		file >> nombre >> contrasena;
+		file >> nombre >> contrasena >> score;
 		while(!file.eof())
 		{
-			if(nombreUsuario!= nombre && codigo != contrasena)
+			if(name!= nombre && c2 != contrasena)
 			{
-				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena << "\n";
+				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
 			}
 			else
 			{
 				found++;
 				cout << "\n\t\t\tBorrado de Usuario exitoso";
 			}
-			file >> nombre >> contrasena;
+			file >> nombre >> contrasena >> score;
 		}
 		if(found==0)
 		{
@@ -266,4 +230,50 @@ void Usuario::borrar()
 		rename("Record.txt","nombresUsuarios.txt");
 		exit(0);
 	}
+}
+void Usuario::cambioScore(int valScore)
+{
+	system("cls");
+	fstream file,file1;
+	string name;
+	file.open("nombresUsuarios.txt",ios::in);
+	if(!file)
+	{
+		cout<<"\n\t\t\tNo hay informacion...";
+		file.close();
+	}
+	else
+	{
+		name = nameUsuario;
+		file1.open("Record.txt",ios::app | ios::out);
+		file >> nombre >> contrasena >> score;
+		while(!file.eof())
+		{
+			if(name!= nombre)
+			{
+				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
+			}
+			else
+			{
+				if(valScore > score)
+                {
+                    score = valScore;
+                    file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+                }
+                else{
+                    if(valScore <= score){
+                       valScore = score;
+                       score = score;
+                       file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+                    }
+                }
+			}
+			file >> nombre >> contrasena >> score;
+		}
+		file1.close();
+		file.close();
+		remove("nombresUsuarios.txt");
+		rename("Record.txt","nombresUsuarios.txt");
+	}
+	cout << "\n\n\t\t\tFIN DEL JUEGO!!!\n\n\n";
 }

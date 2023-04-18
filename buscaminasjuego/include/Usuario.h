@@ -6,20 +6,23 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include "Juego.h"
 using namespace std;
 class Usuario
 {
 	private:
 		string nombre, contrasena;
+		int score;
+		int valScore;
 	public:
-		void menuPrincipal();
 		void iniciarSesion();
 		void menuSecundario();
 		void insertar();
 		void modificar();
 		void borrar();
+		void cambioScore (int valScore);
 
 };
 
 
-#endif // USUARIO_H
+#endif // USUARIO_H
