@@ -11,15 +11,15 @@ class Usuario
 {
 	private:
 		string nombre, contrasena;
-		int score;
-		int valScore;
+		int score;//crea las variables usadas para le punteo
+		int valScore;//crea variable usada para almacenar el valor del punteo
 	public:
-		void iniciarSesion();
-		void menuSecundario();
-		void insertar();
-		void modificar();
-		void borrar();
-		void cambioScore (int valScore);
+		void iniciarSesion();//trae las funciones que inician el juego
+		void menuSecundario();//se obtiene la funcion de usuarios
+		void insertar();//nos permite colocar los valores ingresados para el usuario
+		void modificar();//atrae la funcion que permite hacer cambios al documento de texto con los usuarios
+		void borrar();//permite invocar la funcion para eliminar datos en el usuario
+		void cambioScore (int valScore);//realiza la sumatoria de los puntos y permite acumular puntos
 
 };
 

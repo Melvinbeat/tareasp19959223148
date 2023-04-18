@@ -66,19 +66,19 @@
 	"Config.h"
 	"Usuario.h"
 
-1681788000 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\juego.h
+1681795207 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\juego.h
 	"Tablero.h"
 
-1681785976 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\tablero.h
+1681795490 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\tablero.h
 	<iostream>
 	<vector>
 	"Celda.h"
 
-1681785976 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\celda.h
+1681795207 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\celda.h
 
-1681785976 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\config.h
+1681795207 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\config.h
 
-1681788000 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\usuario.h
+1681795763 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\include\usuario.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -86,11 +86,11 @@
 	<conio.h>
 	<iomanip>
 
-1681785976 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\celda.cpp
+1681795271 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\celda.cpp
 	"Celda.h"
 	<iostream>
 
-1681785976 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\config.cpp
+1681795316 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\config.cpp
 	<iostream>
 	<unistd.h>
 	"Config.h"
@@ -101,12 +101,12 @@
 	<unistd.h>
 	"Usuario.h"
 
-1681785976 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\tablero.cpp
+1681795384 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\tablero.cpp
 	"Tablero.h"
 	<sstream>
 	<iostream>
 
-1681788000 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\usuario.cpp
+1681793646 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\buscaminasjuego\src\usuario.cpp
 	"Usuario.h"
 	"Juego.h"
 	"Config.h"
