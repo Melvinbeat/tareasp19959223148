@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1681926236 source:d:\universidad\3ersemestre\programacion\programasgb\prototipo2pp12023\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1681926244 source:d:\universidad\3ersemestre\programacion\programasgb\prototipo2pp12023\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681920640 d:\universidad\3ersemestre\programacion\programasgb\prototipo2pp12023\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
