@@ -198,9 +198,9 @@ void loginadministrador(){
 	cout<<"\t\t\t |   LOGIN ADMINISTRADOR  |"<<endl;
 	cout<<"\t\t\t-------------------------------------"<<endl;
 	cout<<"\t\t\t 1). Agregar nuevo usuario "<<endl;
-	cout<<"\t\t\t 1). Modificar usuario "<<endl;
-	cout<<"\t\t\t 1). Borrar usuario "<<endl;
-	cout<<"\t\t\t 3). LOG OUT"<<endl;
+	cout<<"\t\t\t 2). Modificar usuario "<<endl;
+	cout<<"\t\t\t 3). Borrar usuario "<<endl;
+	cout<<"\t\t\t 4). Regresar"<<endl;
 		cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:1-2-3-4-5 "<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;

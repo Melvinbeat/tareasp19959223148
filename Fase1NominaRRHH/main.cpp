@@ -1,5 +1,11 @@
 #include <iostream>
 #include <cstdlib>
+#include<fstream>
+#include<stdlib.h>
+#include<cstdlib>
+#include<conio.h>
+#include<iomanip>
+#include "Usuario.h"
 
 using namespace std;
 void creditosModulo();
@@ -14,6 +20,7 @@ void menuGeneralSTAFF();
 void menuGeneralEmpleados();
 int main()
 {
+    Usuario IngresoUsuario;
     int numero;
     do
     {
@@ -34,15 +41,18 @@ int main()
 	switch(numero)
 	{
 	    case 1:
+	        //IngresoUsuario.iniciarSesion();
 	        menuGeneralSTAFF();
 	        break;
 
 	    case 2:
+	        //IngresoUsuario.iniciarSesion();
 	        menuGeneralEmpleados();
 	        break;
 
 	    case 3:
 	        break;
+
 	    default:
             cout<<"\t\t\tIngrese opcion valida"<<endl;
             cin.get();
@@ -56,6 +66,7 @@ return 0;
 void menuGeneralSTAFF(){
     system("cls");
     int choice1;
+    Usuario ingresoUsuario;
 
 	do
     {
@@ -66,8 +77,9 @@ void menuGeneralSTAFF(){
 	cout<<"\t\t\t 1). Informacion personal laboral "<<endl;
 	cout<<"\t\t\t 2). Procesos"<<endl;
 	cout<<"\t\t\t 3). Informes"<<endl;
-	cout<<"\t\t\t 4). Ayuda"<<endl;
-	cout<<"\t\t\t 5). LOG OUT"<<endl;
+	cout<<"\t\t\t 4). Crear Usuarios"<<endl;
+	cout<<"\t\t\t 5). Modificar Usuarios"<<endl;
+	cout<<"\t\t\t 6). LOG OUT"<<endl;
 		cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:1-2-3-4-5 "<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
@@ -87,18 +99,22 @@ void menuGeneralSTAFF(){
 	    informesSTAFF();
 		break;
 	case 4:
-
+	    ingresoUsuario.insertar();
 		break;
 	case 5:
+	    ingresoUsuario.menuSecundario();
+		break;
+    case 6:
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
 	system("cls");
-    }while(choice1!= 5);
+    }while(choice1!= 6);
 
 }
+
 void menuGeneralEmpleados(){
     system("cls");
     int choice2;

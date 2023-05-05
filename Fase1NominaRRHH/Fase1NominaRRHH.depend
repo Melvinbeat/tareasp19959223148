@@ -3,3 +3,30 @@
 	<iostream>
 	<cstdlib>
 
+1683164500 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1683165853 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1683268440 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
