@@ -9,7 +9,7 @@ void Empleados::menuGeneralEmpleados()
     {
 	system("cls");
 	cout<<"\t\t\t-------------------------------------"<<endl;
-	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL Empleados  |"<<endl;
+	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL Empleados  |"<<endl; //menu empleados
 	cout<<"\t\t\t-------------------------------------"<<endl;
 	cout<<"\t\t\t 1). Informacion personal laboral "<<endl;
 	cout<<"\t\t\t 2). Procesos"<<endl;

@@ -11,7 +11,7 @@ void Administracion::menuGeneralSTAFF()
     {
 	system("cls");
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL STAFF |"<<endl;
+	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL STAFF |"<<endl; //staff = administracion
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\t 1). Informacion personal laboral "<<endl;
 	cout<<"\t\t\t 2). Procesos"<<endl;

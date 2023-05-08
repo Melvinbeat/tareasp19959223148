@@ -8,7 +8,7 @@ class Usuario
 		string nombre, contrasena;
 		string nombre2, accion;
 		char* date_time;
-	public:
+	public://funciones
 		void iniciarSesion();
 		void iniciarSesionSTAFF();
 		void menuSecundario();

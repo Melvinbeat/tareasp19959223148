@@ -4,7 +4,7 @@
 
 class Administracion
 {
-    public:
+    public: //funciones
         void menuGeneralSTAFF();
         void infopersonalSTAFF();
         void procesoSTAFF();

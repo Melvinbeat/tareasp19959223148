@@ -33,8 +33,7 @@ int main()
         switch(numero)
         {
             case 1:
-                //IngresoUsuario.insertar();
-                IngresoUsuario.iniciarSesion();
+                IngresoUsuario.iniciarSesion(); //carga el primer menu donde se encuentra el resto
                 break;
 
             case 2:

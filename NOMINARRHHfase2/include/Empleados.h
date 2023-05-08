@@ -4,7 +4,7 @@
 
 class Empleados
 {
-    public:
+    public: //funciones
         void menuGeneralEmpleados();
         void infopersonalEmpleados();
         void procesoEmpleados();

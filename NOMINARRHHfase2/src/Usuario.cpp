@@ -27,7 +27,7 @@ void Usuario::iniciarSesion()
     cout<<"\n\t\tUsuario: ";
     cin>>nameUsuario;
     cout << "\t\tContrasena: ";
-    //cin >> codigo;
+    //cin >> codigo;   sr retira para poder incluir el caracter y asi guardar el valor en la nueva variable incorporada
     //test
     char caracter;
     caracter = getch();

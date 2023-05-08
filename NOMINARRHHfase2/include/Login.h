@@ -4,7 +4,7 @@
 using namespace std;
 class Login
 {
-    public:
+    public://funciones
         void iniciarSesion();
     private:
         string nombre, contrasena, fecha, accion;

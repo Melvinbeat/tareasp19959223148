@@ -1,6 +1,6 @@
 #include "Login.h"
 
-void Login::iniciarSesion()
+void Login::iniciarSesion()//iniciamos al menu principal de log
 {
 
 }
