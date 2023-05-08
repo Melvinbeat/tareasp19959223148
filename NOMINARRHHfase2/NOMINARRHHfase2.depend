@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1683522119 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\usuario.h
+	<iostream>
+
+1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\administracion.cpp
+	"Administracion.h"
+	"Usuario.h"
+
+1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\administracion.h
+
+1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\empleados.cpp
+	"Empleados.h"
+	"Usuario.h"
+
+1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\empleados.h
+
+1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\login.cpp
+	"Login.h"
+
+1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\login.h
+	<iostream>
+
+1683524393 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\usuario.cpp
+	"Usuario.h"
+	"Administracion.h"
+	"Empleados.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
+

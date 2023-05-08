@@ -3,7 +3,7 @@
 	<iostream>
 	<cstdlib>
 
-1683164500 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\src\usuario.cpp
+1683271159 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\src\usuario.cpp
 	"Usuario.h"
 	<iostream>
 	<fstream>
@@ -12,7 +12,7 @@
 	<conio.h>
 	<iomanip>
 
-1683165853 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\include\usuario.h
+1683270322 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\include\usuario.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -20,7 +20,7 @@
 	<conio.h>
 	<iomanip>
 
-1683268440 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\main.cpp
+1683271358 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\fase1nominarrhh\main.cpp
 	<iostream>
 	<cstdlib>
 	<fstream>

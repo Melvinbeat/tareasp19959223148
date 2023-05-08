@@ -1,66 +1,100 @@
 #include "Usuario.h"
+#include "Administracion.h"
+#include "Empleados.h"
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-using namespace std;
+#include <ctime>
 
+using namespace std;
+#define ADMINISTRADOR "administrador"
+#define CONTRAADMON "1234"
 string nameUsuario, codigo;
+Administracion funcionAdmon;
+Empleados funcionEmpleados;
+void Usuario::iniciarSesion()
+{
+    system("cls");
+	fstream file, file1;
+	int found=0;
+	file.open("nombresUsuarios.txt",ios::in);
+	file1.open("Bitacora.txt", ios::app | ios::out);
+	cout<<"\n----------------------------------------------------------------------------------------------------------------";
+    cout<<"\n--------------------------------------------------- Iniciar Sesion ---------------------------------------------"<<endl;
+    cout<<"\n\t\tUsuario: ";
+    cin>>nameUsuario;
+    cout << "\t\tContrasena: ";
+    //cin >> codigo;
+    //test
+    char caracter;
+    caracter = getch();
+    codigo = "";
+    while (caracter !=13)
+    {
+        codigo.push_back(caracter);
+        cout <<"*";
+        caracter = getch();
+    }
+    //test
+    file >> nombre >> contrasena;
+    nombre2 = nameUsuario;
+    time_t now = time(0);
+    date_time = ctime(&now);
+    if(nameUsuario==nombre && codigo == contrasena)
+        {
+            accion = "LOGIN";
+            file1<<std::left<<std::setw(20)<< nombre2 <<std::left<<std::setw(15)<< accion <<std::left<<std::setw(15)<< date_time << "\n";
+            file1.close();
+            funcionEmpleados.menuGeneralEmpleados();
+            return;
+            found++;
+        }
+    else
+    {
+        if (nameUsuario==ADMINISTRADOR && codigo==CONTRAADMON)
+        {
+            accion = "LOGIN";
+            file1<<std::left<<std::setw(20)<< nombre2 <<std::left<<std::setw(15)<< accion <<std::left<<std::setw(15)<< date_time;
+            file1.close();
+            funcionAdmon.menuGeneralSTAFF();
+            return;
+            found++;
+        }
+    }
+    file >> nombre >> contrasena;
+    if(found==0)
+    {
+        accion = "NO LOGIN";
+        file1<<std::left<<std::setw(20)<< nombre2 <<std::left<<std::setw(15)<< accion <<std::left<<std::setw(15)<< date_time << "\n";
+        file1.close();
+        cout<<"\n\t\t\t El usuario o contraseÃ±a sin incorrectos..." << endl;
+        system("pause");
+    }
+    file.close();
+}
 void Usuario::insertar()//creamos la funcion que permite crear usuarios
 {
 	system("cls");
-	fstream file;
+	fstream file, file1;
 	cout<<"\n------------------------------------------------------------------------------------------------------------------------";
 	cout<<"\n-------------------------------------------------- Agregar Nuevo Usuario -----------------------------------------------"<<endl;
 	cout<<"\n\t\t\tIngresa el nombre de Usuario: ";
 	cin>>nombre;
-	cout<<"\t\t\tIngresa la contraseña: ";
+	cout<<"\t\t\tIngresa la contraseÃ±a: ";
 	cin>>contrasena;
-	score = 0;//es igualado a cero para que no agrege valore erroneos
 	file.open("nombresUsuarios.txt", ios::app | ios::out);
-	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+	file1.open("Bitacora.txt", ios::app);
+	nombre2 = nameUsuario;
+	accion = "Ins";
+	time_t now = time(0);
+    date_time = ctime(&now);
+	file1<<std::left<<std::setw(20)<< nombre2 <<std::left<<std::setw(15)<< accion <<std::left<<std::setw(15)<< date_time;
+	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
+	file1.close();
 	file.close();
-}
-void Usuario::iniciarSesion()
-{
-    system("cls");
-	fstream file;
-	int found=0, opcion;
-	file.open("nombresUsuarios.txt",ios::in);
-	if(!file)
-	{
-		cout<<"\n\t\t\tNo hay informacion...";
-	}
-	else
-	{
-		cout<<"\n----------------------------------------------------------------------------------------------------------------";
-        cout<<"\n--------------------------------------------------- Iniciar Sesion ---------------------------------------------"<<endl;
-		cout<<"\n\t\tUsuario: ";
-		cin>>nameUsuario;
-		cout << "\t\tContraseña: ";
-		cin >> codigo;
-		file >> nombre >> contrasena >> score;
-		while(!file.eof())
-		{
-			if(nameUsuario==nombre && codigo == contrasena)
-			{
-			    //
-
-				found++;
-			}
-			file >> nombre >> contrasena >> score;
-		}
-
-		if(found=0)
-		{
-			cout<<"\n\t\t\t El usuario o contraseña sin incorrectos...";
-
-		}
-		file.close();
-
-	}
 }
 void Usuario::menuSecundario()
 {
@@ -70,7 +104,7 @@ void Usuario::menuSecundario()
 	system("cls");
 	cout<<"\n------------------------------------------------------------------------------------------------------------------------";
 	cout<<"\n------------------------------------------------- Modificacion de Usuario ----------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Cambiar usuario o contraseña"<<endl;
+	cout<<"\t\t\t 1. Cambiar usuario o contraseï¿½a"<<endl;
 	cout<<"\t\t\t 2. Borrar cuenta"<<endl;
 	cout<<"\t\t\t 3. Regresar"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
@@ -105,39 +139,39 @@ void Usuario::modificar()
 	file.open("nombresUsuarios.txt",ios::in);
 	cout<<"\n Ingrese su nombre de usuario: ";
     cin>>name;
-    cout<<" Ingrese la contraseña: ";
+    cout<<" Ingrese la contraseï¿½a: ";
     cin>>c2;
     file1.open("Record.txt",ios::app | ios::out);
-    file >> nombre >> contrasena >> score;
+    file >> nombre >> contrasena;
     while(!file.eof())
     {
         if(name!=nombre && c2!=contrasena){
-         file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+         file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
         }
         else{
             cout << "\n\tQue desea modificar?" << endl;
             cout << "\t1. Usuario" << endl;
-            cout << "\t2. Contraseña" << endl;
+            cout << "\t2. Contraseï¿½a" << endl;
             cout << "\tIngrese una opcion" << endl;
             cin >> opcion;
             if (opcion == 1){
                 cout<<"\n Ingrese su nombre de usuario: ";
                 cin>>nombre;
-                file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
+                file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
                 nameUsuario = nombre;
                 found++;
             }
             else{
                 if (opcion == 2){
-                    cout<<" Ingrese la contraseña: ";
+                    cout<<" Ingrese la contraseï¿½a: ";
                     cin>>contrasena;
                     codigo = contrasena;
                 }
-            file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score << "\n";
+            file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
             found++;
             }
         }
-        file >> nombre >> contrasena >> score;
+        file >> nombre >> contrasena;
     }
     if(found==0)
     {
@@ -165,22 +199,22 @@ void Usuario::borrar()//creamos la funcion de borrar para luego se usada en otra
 	{
 		cout<<"\n Ingrese el usuario para borrar: ";
 		cin>>name;
-		cout<<" Ingrese la contraseña: ";
+		cout<<" Ingrese la contraseï¿½a: ";
 		cin>>c2;
 		file1.open("Record.txt",ios::app | ios::out);//abrimos archivo a utilizar
-		file >> nombre >> contrasena >> score;
+		file >> nombre >> contrasena;
 		while(!file.eof())
 		{
 			if(name!= nombre && c2 != contrasena)
 			{
-				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<<std::left<<std::setw(15)<< score<< "\n";
+				file1<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
 			}//se imprimen los datos en el log del usuario
 			else
 			{
 				found++;
 				cout << "\n\t\t\tBorrado de Usuario exitoso";
 			}
-			file >> nombre >> contrasena >> score;
+			file >> nombre >> contrasena;
 		}
 		if(found==0)
 		{

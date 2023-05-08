@@ -15,7 +15,6 @@ class Usuario
 		int valScore;//crea variable usada para almacenar el valor del punteo
 	public:
 		void iniciarSesion();//trae las funciones que inician el juego
-		void iniciarSesionSTAFF();
 		void menuSecundario();//se obtiene la funcion de usuarios
 		void insertar();//nos permite colocar los valores ingresados para el usuario
 		void modificar();//atrae la funcion que permite hacer cambios al documento de texto con los usuarios

@@ -1,0 +1,18 @@
+                    Ins            Sun May 07 23:01:33 2023
+mel                 LOGIN          Sun May 07 23:02:09 2023
+
+mel                 LOGIN          Sun May 07 23:49:47 2023
+
+mel                 LOGIN          Mon May 08 12:30:17 2023
+
+administrador       LOGIN          Mon May 08 12:30:42 2023
+administrador       LOGIN          Mon May 08 12:35:52 2023
+administrador       Ins            Mon May 08 12:39:44 2023
+grupo4              NO LOGIN       Mon May 08 12:40:25 2023
+
+mel                 LOGIN          Mon May 08 12:40:45 2023
+
+grupo4              NO LOGIN       Mon May 08 12:47:24 2023
+
+grupo4              NO LOGIN       Mon May 08 12:47:47 2023
+
