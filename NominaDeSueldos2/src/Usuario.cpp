@@ -17,7 +17,6 @@ string nameUsuario, codigo;
 Administracion funcionAdmon;
 Empleados funcionEmpleados;
 Bitacora llamarBitacora;
-
 void Usuario::iniciarSesion()
 {
     system("cls");
@@ -30,9 +29,6 @@ void Usuario::iniciarSesion()
     cin>>nameUsuario;
     cout << "\t\tContrasena: ";
     cin >> codigo;
-
-
-
     file >> nombre >> contrasena;
     while(!file.eof())
     {
@@ -58,13 +54,14 @@ void Usuario::iniciarSesion()
     if(found==0)
     {
         llamarBitacora.ingresoBitacora(nameUsuario,"700", "NO LOGIN");
-        cout<<"\n\t\t\t El usuario o contraseÃ±a sin incorrectos..." << endl;
+        cout<<"\n\t\t\t El usuario o contraseña sin incorrectos..." << endl;
         system("pause");
     }
     file.close();
 }
 void Usuario::menuSecundario()
 {
+    char x;
     int opcion;
 	do
     {
@@ -86,8 +83,13 @@ void Usuario::menuSecundario()
         switch(opcion)
         {
         case 1:
-            llamarBitacora.ingresoBitacora(nameUsuario,"1500", "INS");
-            insertar();
+            do
+            {
+                llamarBitacora.ingresoBitacora(nameUsuario,"1500", "INS");
+                insertar();
+                cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
+                cin>>x;
+            }while(x=='y'||x=='Y');
             break;
         case 2:
             llamarBitacora.ingresoBitacora(nameUsuario,"1500", "UPD");
@@ -122,7 +124,7 @@ void Usuario::insertar()//creamos la funcion que permite crear usuarios
 	cout<<"\n-------------------------------------------------- Agregar Nuevo Usuario -----------------------------------------------"<<endl;
 	cout<<"\n\t\t\tIngresa el nombre de Usuario: ";
 	cin>>nombre;
-	cout<<"\t\t\tIngresa la contraseÃ±a: ";
+	cout<<"\t\t\tIngresa la contraseña: ";
 	cin>>contrasena;
 	file.open("nombresUsuarios.txt", ios::app | ios::out);
 	file<<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< contrasena<< "\n";
@@ -138,7 +140,7 @@ void Usuario::modificar()
 	file.open("nombresUsuarios.txt",ios::in);
 	cout<<"\n Ingrese su nombre de usuario: ";
     cin>>name;
-    cout<<" Ingrese la contraseÃ±a: ";
+    cout<<" Ingrese la contraseña: ";
     cin>>c2;
     file1.open("Record.txt",ios::app | ios::out);
     file >> nombre >> contrasena;
@@ -150,7 +152,7 @@ void Usuario::modificar()
         else{
             cout << "\n\tQue desea modificar?" << endl;
             cout << "\t1. Usuario" << endl;
-            cout << "\t2. ContraseÃ±a" << endl;
+            cout << "\t2. Contraseña" << endl;
             cout << "\tIngrese una opcion" << endl;
             cin >> opcion;
             if (opcion == 1){
@@ -190,7 +192,7 @@ void Usuario::desplegar()
 	file.open("nombresUsuarios.txt",ios::in);
 	if(!file)
 	{
-		cout<<"\n\t\t\tNo hay informaciÃ³n...";
+		cout<<"\n\t\t\tNo hay información...";
 		file.close();
 	}
 	else
@@ -291,4 +293,3 @@ void Usuario::borrar()//creamos la funcion de borrar para luego se usada en otra
 		exit(0);
 	}
 }
-

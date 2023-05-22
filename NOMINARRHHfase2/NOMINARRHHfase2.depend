@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1683522119 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\main.cpp
+1683576590 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\main.cpp
 	<iostream>
 	<cstdlib>
 	<fstream>
@@ -9,31 +9,42 @@
 	<iomanip>
 	"Usuario.h"
 
-1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\usuario.h
+1684693831 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\usuario.h
 	<iostream>
 
-1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\administracion.cpp
+1684504143 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\administracion.cpp
 	"Administracion.h"
 	"Usuario.h"
+	"Bitacora.h"
+	<ctime>
+	<fstream>
+	<iomanip>
 
-1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\administracion.h
+1684502671 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\administracion.h
+	<iostream>
 
-1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\empleados.cpp
+1684692889 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\empleados.cpp
 	"Empleados.h"
 	"Usuario.h"
+	"Bitacora.h"
+	<ctime>
+	<fstream>
+	<iomanip>
 
-1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\empleados.h
+1684693247 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\empleados.h
+	<iostream>
 
-1683515353 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\login.cpp
+1683576590 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\login.cpp
 	"Login.h"
 
-1683515353 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\login.h
+1683576590 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\login.h
 	<iostream>
 
-1683524393 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\usuario.cpp
+1684693831 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\usuario.cpp
 	"Usuario.h"
 	"Administracion.h"
 	"Empleados.h"
+	"Bitacora.h"
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -41,4 +52,16 @@
 	<conio.h>
 	<iomanip>
 	<ctime>
+
+1684504071 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\include\bitacora.h
+	<iostream>
+
+1684506129 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominarrhhfase2\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
 

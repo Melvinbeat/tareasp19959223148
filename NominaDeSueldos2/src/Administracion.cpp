@@ -1,10 +1,16 @@
 #include "Administracion.h"
 #include "Usuario.h"
+#include "Calculos.h"
 #include "Bitacora.h"
+#include "Aplicaciones.h"
+#include "InfoEmpleados.h"
 #include <ctime>
 #include <fstream>
 #include <iomanip>
 Bitacora llamarBitacora2;
+Aplicaciones funcionesAplicaciones;
+InfoEmpleados InformacionEm;
+Calculos boleta1;
 void Administracion::menuGeneralSTAFF(string n)
 {
     system("cls");
@@ -22,7 +28,9 @@ void Administracion::menuGeneralSTAFF(string n)
 	cout<<"\t\t\t 3). Informes"<<endl;
 	cout<<"\t\t\t 4). Catalogo Usuarios"<<endl;  //Relacion para CRUD DE USUARIOS
 	cout<<"\t\t\t 5). Catalogo Empleados"<<endl; //Relacion para CRUD DE EMPLEADOS
-	cout<<"\t\t\t 6). LOG OUT"<<endl;
+	cout<<"\t\t\t 6). Aplicaciones"<<endl;
+	cout<<"\t\t\t 7). Bitacora"<<endl;
+	cout<<"\t\t\t 8). LOG OUT"<<endl;
     cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:1-2-3-4-5-6 "<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
@@ -44,16 +52,23 @@ void Administracion::menuGeneralSTAFF(string n)
 	    ingresoUsuario.menuSecundario();
 		break;
 	case 5:
-	    ingresoUsuario.menuSecundario();
+	    InformacionEm.menu(nombre);
 		break;
     case 6:
+	    funcionesAplicaciones.menu(nombre);
+		break;
+    case 7:
+	    llamarBitacora2.ingresoBitacora(nombre,"1800", "REA");
+	    llamarBitacora2.visualizarBitacora();
+		break;
+    case 8:
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
 	system("cls");
-    }while(choice1!= 6);
+    }while(choice1!= 8);
 }
 void Administracion::infopersonalSTAFF(string n)
 {
@@ -141,20 +156,18 @@ void Administracion::procesoSTAFF(string n)
 }
 void Administracion::infomesSTAFF(string n)
 {
-
+    nombre = n;
     int choice;
-
     do {
 	system("cls");
-	cout<<"\t\t\t-----------------------------------------------"<<endl;
-	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL STAFF -   Informes   |"<<endl;
-	cout<<"\t\t\t-----------------------------------------------"<<endl;
+	cout<<"\t\t\t------------------------------------------------------"<<endl;
+	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL STAFF -   Informes  - 1400 |"<<endl;
+	cout<<"\t\t\t------------------------------------------------------"<<endl;
 	cout<<"\t\t\t 1. aprobar pago a empleado "<<endl;
 	cout<<"\t\t\t 2. revisar y aprobar horas extra "<<endl;
 	cout<<"\t\t\t 3. revisar horas laboradas "<<endl;
 	cout<<"\t\t\t 4. Enviar observacion a trabajador "<<endl;
-	cout<<"\t\t\t 5. Revisar bitacora de informacion"<<endl;
-	cout<<"\t\t\t 6. Retornar menu anterior"<<endl;
+	cout<<"\t\t\t 5. Retornar menu anterior"<<endl;
     cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:1-2-3-4-5 "<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -164,27 +177,23 @@ void Administracion::infomesSTAFF(string n)
         switch(choice)
         {
             case 1:
-
+                llamarBitacora2.ingresoBitacora(nombre,"1400", "APE");
+                boleta1.verpago();
                 break;
             case 2:
-
+                llamarBitacora2.ingresoBitacora(nombre,"1400", "AHE");
                 break;
             case 3:
-
+                llamarBitacora2.ingresoBitacora(nombre,"1400", "RHL");
                 break;
             case 4:
-
+                llamarBitacora2.ingresoBitacora(nombre,"1400", "EOT");
                 break;
             case 5:
-                llamarBitacora2.infoBitacora();
-                system("pause");
-                break;
-            case 6:
-
                 break;
             default:
                 cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
                 cin.get();
         }
-    }while(choice!= 6);
+    }while(choice!= 5);
 }

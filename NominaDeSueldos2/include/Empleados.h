@@ -10,8 +10,8 @@ class Empleados
         void infopersonalEmpleados(string n);
         void procesoEmpleados(string n);
         void informesEmpleados(string n);
-        void setNombre(string usuarioconectado);
-
+    private:
+        string nombre;
 };
 
 #endif // EMPLEADOS_H

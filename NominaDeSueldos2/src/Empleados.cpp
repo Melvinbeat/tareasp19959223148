@@ -1,11 +1,12 @@
 #include "Empleados.h"
 #include "Usuario.h"
 #include "Bitacora.h"
+#include "Calculos.h"
 #include <ctime>
 #include <fstream>
 #include <iomanip>
 Bitacora llamarBitacora3;
-Usuario nombre;
+Calculos boleta;
 void Empleados::menuGeneralEmpleados(string n)
 {
     system("cls");
@@ -16,8 +17,6 @@ void Empleados::menuGeneralEmpleados(string n)
 	system("cls");
 	cout<<"\t\t\t-------------------------------------"<<endl;
 	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL Empleados  |"<<endl;
-	cout<<"\t\t\t-------------------------------------"<<endl;
-	cout<<"\t\t\tUSUARIO : " <<endl;
 	cout<<"\t\t\t-------------------------------------"<<endl;
 	cout<<"\t\t\t 1). Informacion personal laboral "<<endl;
 	cout<<"\t\t\t 2). Procesos"<<endl;
@@ -157,6 +156,8 @@ void Empleados::informesEmpleados(string n)
         {
             case 1:
                 llamarBitacora3.ingresoBitacora(nombre,"1100", "VNP");
+                //boleta.verpago();
+
                 break;
             case 2:
                 llamarBitacora3.ingresoBitacora(nombre,"1100", "VPE");
