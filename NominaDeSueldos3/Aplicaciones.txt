@@ -1,0 +1,3 @@
+700            login          activo         
+1300           proceso        staff          
+1300           procesostaff   activo         
