@@ -16,8 +16,6 @@ int main()
     int numero;
     do
     {
-    //system("color 1A");
-
     system("cls");
     cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\t |   PROGRAMA EMPRESARIAL   |"<<endl;
