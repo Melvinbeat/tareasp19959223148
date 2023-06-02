@@ -217,3 +217,110 @@
 	<iomanip>
 	<ctime>
 
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\usuario.h
+	<iostream>
+
+1685519040 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\administracion.cpp
+	"Administracion.h"
+	"Usuario.h"
+	"Calculos.h"
+	"Bitacora.h"
+	"Aplicaciones.h"
+	"InfoEmpleados.h"
+	"Puestos.h"
+	<ctime>
+	<fstream>
+	<iomanip>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\administracion.h
+	<iostream>
+
+1685519040 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\calculos.h
+	<iostream>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\bitacora.h
+	<iostream>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\aplicaciones.h
+	<iostream>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\infoempleados.h
+	<iostream>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\puestos.h
+	<iostream>
+
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\aplicaciones.cpp
+	"Aplicaciones.h"
+	"Bitacora.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1685522246 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\calculos.cpp
+	"Calculos.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<stdlib.h>
+	<iomanip>
+
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\infoempleados.cpp
+	"InfoEmpleados.h"
+	"Bitacora.h"
+	"Calculos.h"
+	<conio.h>
+	<iomanip>
+	<iostream>
+	<fstream>
+
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\puestos.cpp
+	"Puestos.h"
+	<iostream>
+	<iomanip>
+	<fstream>
+
+1685512144 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\usuario.cpp
+	"Usuario.h"
+	"Administracion.h"
+	"Empleados.h"
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
+
+1685512144 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\include\empleados.h
+	<iostream>
+
+1685672575 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos22\src\empleados.cpp
+	"Empleados.h"
+	"Usuario.h"
+	"Bitacora.h"
+	<ctime>
+	<fstream>
+	<iomanip>
+

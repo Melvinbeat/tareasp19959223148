@@ -70,15 +70,18 @@ void Empleados::infopersonalEmpleados(string n)
         {
             case 1:
                 llamarBitacora3.ingresoBitacora(nombre,"900", "RIP");
+                cout << " Debe solicitar acceso a su infomacion personal en oficina 723 " << endl;
                 break;
             case 2:
                 llamarBitacora3.ingresoBitacora(nombre,"900", "RPE");
                 break;
             case 3:
                 llamarBitacora3.ingresoBitacora(nombre,"900", "RPD");
+                cout << "Debe solicitarlo personalmente en oficinas  " << endl;
                 break;
             case 4:
                 llamarBitacora3.ingresoBitacora(nombre,"900", "RR");
+                cout << "informacion no disponible por el momento " << endl;
                 break;
             case 5:
                 break;
@@ -112,15 +115,19 @@ void Empleados::procesoEmpleados(string n)
         {
             case 1:
                 llamarBitacora3.ingresoBitacora(nombre,"1000", "SNP");
+                cout << "Debe solicitarlo personalmente en oficinas  " << endl;
                 break;
             case 2:
                 llamarBitacora3.ingresoBitacora(nombre,"1000", "RPD");
+                cout << "Debe revisarlos personalmente en oficinas  " << endl;
                 break;
             case 3:
                 llamarBitacora3.ingresoBitacora(nombre,"1000", "SHE");
+                cout << "No hay horas extras disponibles por el momento  " << endl;
                 break;
             case 4:
                 llamarBitacora3.ingresoBitacora(nombre,"1000", "SOS");
+                cout << "| Ext. 62541  | Oficina central - 704 |" << endl;
                 break;
             case 5:
                 break;
