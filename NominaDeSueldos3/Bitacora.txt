@@ -245,3 +245,4 @@ grupo4              700            LOGIN          Mon May 29 10:05:40 2023
 grupo4              1100           VNP            Mon May 29 10:05:50 2023
 grupo4              1100           VNP            Mon May 29 10:06:12 2023
 administrador       700            LOGIN          Mon May 29 10:08:37 2023
+administrador       700            LOGIN          Wed May 31 16:13:18 2023

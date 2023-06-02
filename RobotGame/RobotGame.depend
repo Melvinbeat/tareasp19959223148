@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1685658132 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\main.cpp
+	<iostream>
+	"player.h"
+	"mapcell.h"
+	"gamemap.h"
+
+1685655663 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\src\gamemap.cpp
+	"gamemap.h"
+	<iostream>
+	<fstream>
+
+1685655663 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\include\gamemap.h
+	"mapcell.h"
+
+1685655663 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\include\mapcell.h
+
+1685655663 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\src\mapcell.cpp
+	"mapcell.h"
+	<iostream>
+
+1685655663 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\src\player.cpp
+	"player.h"
+	<iostream>
+	<fstream>
+
+1685655663 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\robotgame\include\player.h
+

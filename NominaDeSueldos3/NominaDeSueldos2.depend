@@ -483,3 +483,109 @@
 	<conio.h>
 	<iomanip>
 
+1684707298 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\usuario.h
+	<iostream>
+
+1685349853 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\administracion.cpp
+	"Administracion.h"
+	"Usuario.h"
+	"Calculos.h"
+	"Bitacora.h"
+	"Aplicaciones.h"
+	"InfoEmpleados.h"
+	<ctime>
+	<fstream>
+	<iomanip>
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\administracion.h
+	<iostream>
+
+1685348666 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\calculos.h
+	<iostream>
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\bitacora.h
+	<iostream>
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\aplicaciones.h
+	<iostream>
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\infoempleados.h
+	<iostream>
+
+1684707298 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\aplicaciones.cpp
+	"Aplicaciones.h"
+	"Bitacora.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+
+1684709786 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1685374687 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\calculos.cpp
+	"Calculos.h"
+	<iostream>
+	<stdlib.h>
+	<fstream>
+	<cstdlib>
+	<string>
+	<sstream>
+	<conio.h>
+	<iomanip>
+
+1684707298 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\confiempleados.cpp
+	"ConfiEmpleados.h"
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\confiempleados.h
+	<iostream>
+
+1685349853 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\empleados.cpp
+	"Empleados.h"
+	"Usuario.h"
+	"Bitacora.h"
+	"Calculos.h"
+	<ctime>
+	<fstream>
+	<iomanip>
+
+1684707298 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\include\empleados.h
+	<iostream>
+
+1684707298 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\infoempleados.cpp
+	"InfoEmpleados.h"
+	"Bitacora.h"
+	<conio.h>
+	<iomanip>
+	<iostream>
+	<fstream>
+
+1684707298 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\nominadesueldos3\src\usuario.cpp
+	"Usuario.h"
+	"Administracion.h"
+	"Empleados.h"
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
+
