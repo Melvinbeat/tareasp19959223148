@@ -90,7 +90,7 @@ void Usuario::iniciarSesion()
     }
     file.close();
 }
-void Usuario::menuSecundario()
+void Usuario::menuSecundario() //implementacion de CRUD
 {
     char x;
     int opcion;
