@@ -42,6 +42,7 @@ void Menu::principal()
 
 		break;
 	case 3:
+	    menprocesos();
 
 		break;
     case 4:
