@@ -24,7 +24,7 @@
 1686156151 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\bitacora.h
 	<iostream>
 
-1686158799 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\usuario.cpp
+1686160026 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\usuario.cpp
 	"Usuario.h"
 	"Bitacora.h"
 	"Menu.h"
@@ -36,7 +36,7 @@
 	<iomanip>
 	<ctime>
 
-1686158654 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\menu.cpp
+1686160666 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\menu.cpp
 	"Menu.h"
 	<iostream>
 	<fstream>
@@ -47,4 +47,15 @@
 	<ctime>
 
 1686159530 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\menu.h
+
+1686161742 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\aplicaciones.cpp
+	"Aplicaciones.h"
+	"Bitacora.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+
+1686161048 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\aplicaciones.h
+	<iostream>
 

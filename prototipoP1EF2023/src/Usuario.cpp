@@ -90,7 +90,7 @@ void Usuario::iniciarSesion()
     }
     file.close();
 }
-void Usuario::menuSecundario() //implementacion de CRUD
+void Usuario::menuSecundario() //implementacion de CRUD de usuarios
 {
     char x;
     int opcion;
@@ -148,7 +148,7 @@ void Usuario::menuSecundario() //implementacion de CRUD
         }
     }while(opcion!=6);
 }
-void Usuario::insertar()//creamos la funcion que permite crear usuarios
+void Usuario::insertar()//creamos la funcion que permite crear usuarios CRUD
 {
 	system("cls");
 	cout << "\n\t\t\t Usuario: " << nameUsuario << "\n\n";
@@ -208,7 +208,7 @@ void Usuario::modificar()
 		system("pause");
 	}
 }
-void Usuario::desplegar()
+void Usuario::desplegar() //CURD
 {
     system("cls");
 	fstream file;
@@ -239,7 +239,7 @@ void Usuario::desplegar()
 	system("pause");
 	file.close();
 }
-void Usuario::buscar()
+void Usuario::buscar() //CRUD
 {
 	system("cls");
 	fstream file;
