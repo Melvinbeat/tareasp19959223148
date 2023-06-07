@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1686158069 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\main.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Usuario.h"
+
+1686157577 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\usuario.h
+	<iostream>
+
+1686156151 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1686156151 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\bitacora.h
+	<iostream>
+
+1686158799 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\usuario.cpp
+	"Usuario.h"
+	"Bitacora.h"
+	"Menu.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
+
+1686158654 source:d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\src\menu.cpp
+	"Menu.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<ctime>
+
+1686158504 d:\universidad\3ersemestre\programacion\programasgb\tareasp19959223148\prototipop1ef2023\include\menu.h
+
