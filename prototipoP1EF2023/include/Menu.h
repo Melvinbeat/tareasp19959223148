@@ -8,6 +8,9 @@ class Menu
 		//string nombre, contrasena;
 	public:
 		void principal();
+		void mencatalogos();
+		void menprocesos();
+		void meninformes();
 };
 
 #endif // MENU_H
